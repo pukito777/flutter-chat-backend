@@ -12,7 +12,7 @@ const validarJWT = (req, res, next) => {
         })
     }
     try {
-        const {uid} = jwt.verify(token, process.env.JWT_KEY)
+        const { uid } = jwt.verify(token, process.env.JWT_KEY)
         req.uid = uid
         
         next()
@@ -22,11 +22,7 @@ const validarJWT = (req, res, next) => {
             msg: 'Token no válido'
         })
 
-    }
-
-    
-
-    //return 
+    }       
 
 }
 
